@@ -14,7 +14,7 @@ const [mostPopularFilms, setMostPopularFilms] = useState([])
 useEffect(
   ()=>{
     getData();
-  }
+  },[]
 )
 
 
