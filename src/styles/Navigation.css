@@ -69,4 +69,16 @@
 .nav-bar > ul > li {
   margin-right: 10px;
 }
+
+.nav-bar > ul > li :link {
+  text-decoration: none;
+}
+
+.nav-bar > ul > li :visited {
+  color: white;
+}
+
+.nav-bar > ul > li :hover {
+  color: #7c7c7c;
+}
 /*# sourceMappingURL=Navigation.css.map */

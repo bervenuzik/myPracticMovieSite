@@ -3,18 +3,16 @@
 
 
 .card{
-
     width: 270px;
     height: 370px;
     margin: 10px 15px;
     position: relative;
     justify-self: center;
-    border-radius: 5px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius:5px;
-    
+    border-radius: 5px !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+
     @media (max-width: $movie-panel-breakpoint-big) {
         width: 320px;
         height: 420px;

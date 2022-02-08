@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import logo from "../images/logo.png"
 require ("../styles/Navigation.css")
 
@@ -13,11 +14,16 @@ return(
             <div className='nav-bar'>
                 <input className='search-input' type="text" />
             <ul>
-                 <li>Most popular</li>
-                 <li>Top 250</li>
-                 <li>Coming Soon</li>
+           <li><Link to={"/"}>Most popular</Link></li>
+                 <li>
+                   <Link to={"/"}>Top 250</Link>
+                </li>
+                 <li>
+                 <Link to={"/"}>Coming Soon</Link>
+                </li>
                  <li></li>
              </ul>
+           
             </div>
         </div>
        

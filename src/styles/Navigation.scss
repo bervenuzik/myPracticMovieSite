@@ -50,4 +50,16 @@
 }
 .nav-bar > ul >li{
     margin-right: 10px;
+    
+    :link{
+        text-decoration: none;
+    }
+    :visited {
+        color: white;
+    }
+    :hover{
+        color: rgb(124, 124, 124);
+    }
+    
+    
 }

@@ -5,11 +5,10 @@
   position: relative;
   -ms-grid-column-align: center;
       justify-self: center;
-  border-radius: 5px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 5px;
+  border-radius: 5px !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 @media (max-width: 1300px) {
