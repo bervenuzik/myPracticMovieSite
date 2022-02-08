@@ -1,6 +1,6 @@
 import React ,{useEffect} from "react";
 var classNames = require("classnames");
-require("./movieCard.css");
+require("../styles/movieCard.css");
 
 function RatingImdb(props) {
   const classesRating = classNames({

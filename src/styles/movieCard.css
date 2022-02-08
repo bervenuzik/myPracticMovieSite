@@ -1,0 +1,69 @@
+.card {
+  width: 270px;
+  height: 370px;
+  margin: 10px 15px;
+  position: relative;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+@media (max-width: 1300px) {
+  .card {
+    width: 320px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card {
+    width: 370px;
+    height: 470px;
+  }
+}
+
+@media (max-width: 850px) {
+  .card {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    width: 270px;
+    height: 370px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 170px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 440px) {
+  .card {
+    width: 310px;
+    height: 420px;
+    margin: 10px 0px;
+    padding: 5px 5px;
+  }
+}
+
+.display {
+  display: none;
+}
+/*# sourceMappingURL=movieCard.css.map */

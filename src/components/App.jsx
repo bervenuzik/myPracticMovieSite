@@ -1,10 +1,11 @@
 
-import './App.css';
+import '../styles/App.css';
 import React, { useState,useEffect } from "react";
-import axios from "./axios.js"
-import API_KEY from "./API_KEY.js"
-import MovieCard from "./movieCard.jsx"
+import axios from "../axios.js"
+import API_KEY from "../API_KEY.js"
+import MovieCard from "./MovieCard.jsx"
 import Navigation from "./Navigation.jsx"
+
 
 
 
@@ -12,8 +13,8 @@ function App() {
 const [mostPopularFilms, setMostPopularFilms] = useState([])
 
 useEffect(
-  ()=>{
-    getData();
+  async ()=>{
+   await getData();
   },[]
 )
 
@@ -53,7 +54,9 @@ const getData = async ()=>{
       <div className={'movie-panel'}>
           {
             mostPopularFilms.map((film,index)=>{
-            return <MovieCard key={film.id} film={film}></MovieCard>;
+              if(index < 21){
+                return <MovieCard key={film.id} film={film}></MovieCard>;
+              }
           })
           }
       </div>

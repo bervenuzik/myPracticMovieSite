@@ -1,0 +1,45 @@
+@import "./breakPoints.scss";
+@import "./Colors.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    
+}
+html {
+    font-size: 18px;
+}
+body{
+    background-color: $body-color;
+    padding-top: 60px;
+}
+#root{
+    position: relative;
+}
+
+.movie-panel{
+    max-width: 1300px;
+    min-width: 320px;
+    margin:  auto ;
+    position: relative;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    gap: 1rem;
+    @media (max-width: $movie-panel-breakpoint-big) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: $movie-panel-breakpoint-medium) {
+        grid-template-columns: 1fr 1fr;
+
+    }
+    @media (max-width: $movie-panel-breakpoint-small) {
+        grid-template-columns: 1fr ;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
