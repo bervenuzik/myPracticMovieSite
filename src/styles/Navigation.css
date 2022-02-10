@@ -20,7 +20,7 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  max-width: calc($movie-panel-breakpoint-big - 10px);
+  max-width: calc(1300px - 10px);
 }
 
 @media (max-width: 640px) {

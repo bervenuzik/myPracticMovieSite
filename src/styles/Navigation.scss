@@ -18,7 +18,7 @@ $navigation-height: 60px;
     justify-content:space-between;
     align-items:center;
     height:100%;
-    max-width:calc($movie-panel-breakpoint-big - 10px);
+    max-width:calc(#{$movie-panel-breakpoint-big} - 10px);
     @media (max-width: $movie-panel-breakpoint-pre-small) {
         flex-direction: row-reverse;
 
