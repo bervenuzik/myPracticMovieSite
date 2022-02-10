@@ -1,8 +1,10 @@
 @import "./breakPoints.scss";
 @import "./Colors.scss";
 
+$navigation-height: 60px;
+
 .navigation{
-    height:60px;
+    height:$navigation-height;
     width:100%;
     background-color:$navigation-color;
     position:fixed;
@@ -17,14 +19,37 @@
     align-items:center;
     height:100%;
     max-width:calc($movie-panel-breakpoint-big - 10px);
+    @media (max-width: $movie-panel-breakpoint-pre-small) {
+        flex-direction: row-reverse;
+
+    }
+    @media (max-width: $movie-panel-breakpoint-small) {
+        flex-direction: row;
+        justify-content:space-between;
+        width: 100%;
+    }
 }
 .logo{
     height:100%;
     padding:8px;
+    @media (max-width: $movie-panel-breakpoint-pre-small) {
+        width: 130px;
+        height: auto;
+        display: none;
+    }
+    @media (max-width: $movie-panel-breakpoint-small) {
+        
+    }
 }
 .nav-bar{
     display: flex;
     justify-content: space-between;
+    @media (max-width: $movie-panel-breakpoint-pre-small) {
+        flex-direction: row-reverse;
+        width: 100%;
+
+    }
+    
 }
 .search-input{
     margin-right: 10px;
@@ -34,6 +59,8 @@
     border: 1px solid white;
     padding: 1px 5px;
     color: rgba(255, 255, 255,0.8);
+    transition: opacity 0.2s ease-in-out;
+   
     
 }
  
@@ -45,9 +72,65 @@
     list-style: none;
     width:fit-content;
     font-size: 0.8rem;
-    //margin-right: 20px;
+    transition: transform 0.2s ease-in-out;
+    @media (max-width: $movie-panel-breakpoint-pre-small) {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        width: 250px;
+        height: 100vh;
+        background: $body-color;
+        &>li{
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+    }
+}
+.btn-show-menu{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: calc(#{$navigation-height} / 2);
+    transform: translate(120%,calc(-50%));
+    background-color: aliceblue;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: $body-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3px 0;
+    @media (min-width: $movie-panel-breakpoint-pre-small) {
+        display: none;
+    }
+    &:before{
+        content:"";
+        width:15px;
+        height: 2px;
+        background: #fff;
+
+
+    }
+    &:after{
+        content:"";
+        width:15px;
+        height: 2px;
+        background: #fff;
+    }
+    & > div{
+        width: 15px;
+        height: 2px;
+        background: #fff;
+    }
     
 }
+
+
 .nav-bar > ul >li{
     margin-right: 10px;
     
@@ -63,3 +146,5 @@
     
     
 }
+
+

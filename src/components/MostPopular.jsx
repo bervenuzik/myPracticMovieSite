@@ -1,4 +1,4 @@
-import React ,{useState,useEffect} from 'react';
+import React ,{useState,useEffect,useMemo} from 'react';
 import axios from "../axios.js"
 import API_KEY from "../API_KEY.js"
 import MovieCard from "./MovieCard.jsx"
